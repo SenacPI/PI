@@ -1,13 +1,16 @@
 package Menu;
 
+import game.Game;
 import java.util.Scanner;
 
 public class menuUI {
 
     Scanner sc;
-    public void menu() {
+    static Game game;
 
-        sc = new Scanner(System.in);
+    public static void menu() {
+
+        Scanner sc = new Scanner(System.in);
 
         // print 'jogo aventura'
         System.out.println("Bem-vindo ao jogo aventura!");
@@ -35,36 +38,28 @@ public class menuUI {
         int option = scanner.nextInt();
 
         // if option == 1
+
         if (option == 1) {
 
-            try
-            {
-                final String os = System.getProperty("os.name");
+            //print 30 new lines
+            for (int i = 0; i < 30; i++) {
+                System.out.println('\n');
+            }
 
-                if (os.contains("Windows"))
-                {
-                    Runtime.getRuntime().exec("cls");
-                }
-                else
-                {
-                    Runtime.getRuntime().exec("clear");
-                }
-            }
-            catch (final Exception e)
-            {
-                //  Handle any exceptions.
-            }
+            // call class Game
+            game.start();
         }
 
         // if option == 2
         if (option == 2) {
 
+            // print 'fuck you'
+            System.out.println("fuck you");
+
+            // exit
+            System.exit(0);
+
+
         }
-
-        // print 'Obrigado por jogar!'
-        System.out.println("Obrigado por jogar!");
-
-
-
-    }
+}
 }

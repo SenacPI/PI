@@ -3,21 +3,18 @@ package user;
 public class Character {
 
     private int life;
-
     private int score;
-
     private int level;
-
     private int exp;
-
     private int level_up;
-
     private int attack;
 
+    // Getters
     public int getLife() {
         return life;
     }
 
+    // Setters
     public void setLife(int life) {
         this.life = life;
     }

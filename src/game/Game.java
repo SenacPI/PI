@@ -4,17 +4,7 @@ import user.Character;
 
 public class Game {
 
-    public static void start(String[] args) {
+    public static void start() {
         System.out.println("O jogo começou!");
-
-
-        // call Character class
-        Character character = new Character();
-
-
-
     }
-
-
-
 }
