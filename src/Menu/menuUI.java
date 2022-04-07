@@ -1,13 +1,15 @@
 package Menu;
 
 import game.Game;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class menuUI {
 
     Scanner sc;
 
-    public static void menu() {
+    public static void menu() throws IOException {
 
         Scanner sc = new Scanner(System.in);
 

@@ -1,8 +1,6 @@
 package user;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class Character {
@@ -19,7 +17,7 @@ public class Character {
         Integer[] arr = {life, score, level, exp, level_up, attack};
 
         try {
-            File myObj = new File("./user/data.txt");
+            File myObj = new File("data.txt");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -35,7 +33,19 @@ public class Character {
     }
 
     // Getters
-    public int getLife() {
+    public int getLife() throws IOException {
+
+        try {
+            FileReader dataRead = new FileReader("data.txt");
+            dataRead.read();
+            System.out.println(dataRead);
+            dataRead.close();
+        }
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
         return life;
     }
 
@@ -43,11 +53,11 @@ public class Character {
     public void setLife(int life) {
 
         try {
-            String sopa = "test number: " + life;
+
             FileWriter myWriter = new FileWriter("data.txt");
-            myWriter.write(sopa);
+            myWriter.write(life);
             myWriter.close();
-            System.out.println("Successfully wrote to the file: " + sopa);
+            System.out.println("Successfully wrote to the file: " + life);
 
         } catch (IOException e) {
             System.out.println("An error occurred.");
