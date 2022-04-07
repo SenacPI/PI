@@ -38,7 +38,8 @@ public class Character {
     // Setters
     public void setLife(int life) {
 
-        Path path = Paths.get("demo.txt");
+        /*
+        Path path = Paths.get("data.txt");
         String text = "…some text…";
 
         try {
@@ -47,9 +48,11 @@ public class Character {
         } catch (IOException e) {
             e.printStackTrace();
         }
+         */
 
         this.life = life;
     }
+
 
     public int getScore() {
         return score;

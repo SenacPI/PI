@@ -9,7 +9,7 @@ public class menuUI {
 
     Scanner sc;
 
-    public static void menu() throws IOException {
+    public static void menu() throws IOException, InterruptedException {
 
         Scanner sc = new Scanner(System.in);
 
