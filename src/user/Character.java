@@ -1,6 +1,10 @@
 package user;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 
 public class Character {
@@ -12,55 +16,35 @@ public class Character {
     private int level_up;
     private int attack;
 
-    public void newSave(int life, int score, int level, int exp, int level_up, int attack) {
-
-        Integer[] arr = {life, score, level, exp, level_up, attack};
-
-        try {
-            File myObj = new File("data.txt");
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
-
-
-    }
-
     // Getters
     public int getLife() throws IOException {
 
-        try {
-            FileReader dataRead = new FileReader("data.txt");
-            dataRead.read();
-            System.out.println(dataRead);
-            dataRead.close();
+        File file = new File("data.txt");
+
+        try (FileReader fr = new FileReader(file))
+        {
+            char[] chars = new char[(int) file.length()];
+            fr.read(chars);
+
+            String fileContent = new String(chars);
+            System.out.println(fileContent);
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
         return life;
     }
 
     // Setters
     public void setLife(int life) {
 
+        Path path = Paths.get("demo.txt");
+        String text = "…some text…";
+
         try {
-
-            FileWriter myWriter = new FileWriter("data.txt");
-            myWriter.write(life);
-            myWriter.close();
-            System.out.println("Successfully wrote to the file: " + life);
-
+            Files.write(path, text.getBytes(), StandardOpenOption.APPEND);
+            System.out.println("Successfully written bytes {0} to the file");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
             e.printStackTrace();
         }
 
