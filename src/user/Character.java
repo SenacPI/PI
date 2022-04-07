@@ -30,16 +30,7 @@ public class Character {
             e.printStackTrace();
         }
 
-        try {
-            FileWriter myWriter = new FileWriter("data.txt");
-            myWriter.write(Arrays.toString(arr));
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
 
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
 
     }
 
@@ -50,6 +41,19 @@ public class Character {
 
     // Setters
     public void setLife(int life) {
+
+        try {
+            String sopa = "test number: " + life;
+            FileWriter myWriter = new FileWriter("data.txt");
+            myWriter.write(sopa);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file: " + sopa);
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
         this.life = life;
     }
 
