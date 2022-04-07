@@ -52,8 +52,8 @@ public class menuUI {
         // if option == 2
         if (option == 2) {
 
-            // print 'fuck you'
-            System.out.println("fuck you");
+            // print exiting message
+            System.out.println("Obrigado por jogar!");
 
             // exit
             System.exit(0);
