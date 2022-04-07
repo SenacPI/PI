@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class menuUI {
 
     Scanner sc;
-    static Game game;
 
     public static void menu() {
 
@@ -47,7 +46,7 @@ public class menuUI {
             }
 
             // call class Game
-            game.start();
+            Game.start();
         }
 
         // if option == 2
