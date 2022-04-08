@@ -1,4 +1,4 @@
-package com.Main;
+package com.company;
 
 import Menu.menuUI;
 

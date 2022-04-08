@@ -1,4 +1,0 @@
-life=100
-score=0
-level=1
-level_up=100
