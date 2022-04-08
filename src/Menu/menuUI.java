@@ -1,6 +1,6 @@
 package Menu;
 
-import game.Game;
+import Game.Game;
 
 import java.io.IOException;
 import java.util.Scanner;
