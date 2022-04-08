@@ -5,7 +5,7 @@ import Game.Game;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class menuUI {
+public class MenuUI {
 
     Scanner sc;
 

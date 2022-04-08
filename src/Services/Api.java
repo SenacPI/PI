@@ -10,7 +10,7 @@ public class Api {
 
     static HttpRequest request;
 
-    public static void dados () throws IOException, InterruptedException{
+    public String data() throws IOException, InterruptedException{
 
         request = HttpRequest.newBuilder()
                 .uri(URI.create("https://servicodados.ibge.gov.br/api/v1/localidades/estados/33%7C35/distritos"))
@@ -21,6 +21,6 @@ public class Api {
 
         Object obj = response.body();
 
-        System.out.println(obj);
+        return obj.toString();
     }
 }

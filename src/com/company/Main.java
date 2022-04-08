@@ -1,6 +1,6 @@
 package com.company;
 
-import Menu.menuUI;
+import Menu.MenuUI;
 
 import java.io.IOException;
 
@@ -10,6 +10,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-       menuUI.menu();
+       MenuUI.menu();
     }
 }
