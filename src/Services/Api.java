@@ -6,11 +6,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class Api {
+public class Api{
 
-    static HttpRequest request;
 
-    public String data() throws IOException, InterruptedException{
+    public String[] data(int i) throws IOException, InterruptedException {
 
         request = HttpRequest.newBuilder()
                 .uri(URI.create("https://servicodados.ibge.gov.br/api/v1/localidades/estados/33%7C35/distritos"))
