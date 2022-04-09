@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Game {
 
     static double money = 0;
-    static double counter = 0.01;
+    static double counter = 0.1;
     static Integer trys = 0;
 
     static Random picker = new Random();
@@ -30,7 +30,7 @@ public class Game {
 
             if (Objects.equals(userAnswer, countryInfo[1])) {
 
-                counter += 0.0025;
+                counter += 0.05;
                 money += 1141 + money * counter;
 
                 System.out.printf("Resposta correta! Você ganhou R$ %.2f ", money);
