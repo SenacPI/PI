@@ -1,25 +1,22 @@
 package Services;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-
 public class Api{
 
+    public String[] data(int randomIndex) {
 
-    public String[] data(int i) throws IOException, InterruptedException {
+        return country()[randomIndex].split(":");
+    }
 
-        request = HttpRequest.newBuilder()
-                .uri(URI.create("https://servicodados.ibge.gov.br/api/v1/localidades/estados/33%7C35/distritos"))
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
+    public String[] country() {
 
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-
-        Object obj = response.body();
-
-        return obj.toString();
+        return new String[]{
+                "Afeganistão:Kabul", "África do Sul:Pretória", "Albânia:Tirana",
+                "Alemanha: Berlim", "Angola:Luanda", "Arábia Saudita:São João",
+                "Argentina:Buenos Aires", "Australia:Camberra", "Armênia:Yerevam",
+                "Azerbaijão:Bacu", "Bahamas:Nassau", "Bangladexe:Daca", "Bélgia:Bruxelas",
+                "Bielorrússia:Minsque", "Bolívia:Sucre", "Bulgária:Sófia", "Cabo Verde:Praia",
+                "Catar:Doa", "Canadá:Otava", "Cazaquistão: Astana", "Chile:Santiago",
+                "China:Pequim", "Colômbia:Bogotá", "Coreia do Sul:Seul", "Costa Rica: São José"
+        };
     }
 }
