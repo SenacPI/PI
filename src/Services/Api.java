@@ -11,7 +11,7 @@ public class Api{
 
         return new String[]{
                 "Afeganistão:Kabul", "África do Sul:Pretória", "Albânia:Tirana",
-                "Alemanha:Berlim", "Angola:Luanda", "Arábia Saudita:São João",
+                "Alemanha:Berlim", "Angola:Luanda", "Arábia Saudita:Riad",
                 "Argentina:Buenos Aires", "Australia:Camberra", "Armênia:Yerevam",
                 "Azerbaijão:Bacu", "Bahamas:Nassau", "Bangladexe:Daca", "Bélgia:Bruxelas",
                 "Bielorrússia:Minsque", "Bolívia:Sucre", "Bulgária:Sófia", "Cabo Verde:Praia",
