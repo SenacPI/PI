@@ -1,10 +1,12 @@
 package Services;
 
-public class Api{
+public class  Api{
 
     public String[] data(int randomIndex) {
 
         return country()[randomIndex].split(":");
+
+
     }
 
     public String[] country() {

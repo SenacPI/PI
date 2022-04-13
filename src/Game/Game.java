@@ -28,7 +28,7 @@ public class Game {
             System.out.println("Resposta: ");
             String userAnswer = sc.nextLine();
 
-            if (Objects.equals(userAnswer, countryInfo[1])) {
+            if (Objects.equals(userAnswer.toLowerCase(), countryInfo[1].toLowerCase())) {
 
                 counter += 0.05;
                 money += 1141 + money * counter;
