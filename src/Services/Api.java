@@ -1,5 +1,8 @@
 package Services;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class  Api{
 
     public String[] data(int randomIndex) {
@@ -22,21 +25,31 @@ public class  Api{
     private String[] set (String[] arr, int randomIndex){
 
         String[] setter = arr;
+        ArrayList<String> ref = new ArrayList<>();
         String Temp;
+
+        ref.add(arr[randomIndex]);
 
         Temp = setter[randomIndex] + "/" + randomIndex;
         setter = Temp.split(":, /");
-        arr[randomIndex] = Temp;
 
-        return validator(setter, arr, randomIndex);
+        return validator(ref, arr, setter, randomIndex);
     }
 
-    private  String[] validator (String[] setter, String[] arr, int randomIndex) {
-        if (setter.length == 3) {
-            set(arr, randomIndex);
+    private  String[] validator (ArrayList ref, String[] arr, String[] setter, int randomIndex) {
+
+        for (int i = 0; i < ref.size(); i++) {
+
+            if (ref.get(i) == arr[randomIndex]) {
+                set(arr, randomIndex);
+            }
+            else {
+                break;
+            }
         }
         return setter;
     }
+
 }
 
 
