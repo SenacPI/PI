@@ -2,16 +2,13 @@ package Menu;
 
 import Game.Game;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class MenuUI {
 
-    Scanner sc;
+    static Scanner sc = new Scanner(System.in);
 
-    public static void menu() throws IOException, InterruptedException {
-
-        Scanner sc = new Scanner(System.in);
+    public static void menu(){
 
         // print 'jogo aventura'
         System.out.println("Bem-vindo ao jogo aventura!");
@@ -41,12 +38,6 @@ public class MenuUI {
         // if option == 1
 
         if (option == 1) {
-
-            //print 30 new lines
-            for (int i = 0; i < 30; i++) {
-                System.out.println('\n');
-            }
-
             // call class Game
             Game.start();
         }
