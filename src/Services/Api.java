@@ -1,7 +1,6 @@
 package Services;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class  Api{
 
@@ -38,12 +37,11 @@ public class  Api{
 
     private  String[] validator (ArrayList ref, String[] arr, String[] setter, int randomIndex) {
 
-        for (int i = 0; i < ref.size(); i++) {
+        for (Object o : ref) {
 
-            if (ref.get(i) == arr[randomIndex]) {
+            if (o == arr[randomIndex]) {
                 set(arr, randomIndex);
-            }
-            else {
+            } else {
                 break;
             }
         }
