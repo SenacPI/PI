@@ -30,7 +30,7 @@ public class Game {
 
             if (Objects.equals(userAnswer.toLowerCase(), countryInfo[1].toLowerCase())) {
 
-                counter += 0.05;
+                counter += 0.1;
                 money += 1141 + money * counter;
 
                 System.out.printf("Resposta correta! Você ganhou R$ %.2f ", money);

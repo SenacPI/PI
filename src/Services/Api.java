@@ -1,12 +1,9 @@
 package Services;
 
-import java.util.LinkedList;
-
 public class  Api{
 
     public String[] data(int randomIndex) {
-        set(country(), randomIndex);
-
+        return set(country(), randomIndex);
     }
 
     public String[] country() {
@@ -22,36 +19,22 @@ public class  Api{
         };
     }
 
-    public String[] set (String[] arr, int randomIndex){
+    private String[] set (String[] arr, int randomIndex){
 
         String[] setter = arr;
         String Temp;
-        Integer counter;
-
-        LinkedList<String[]> ref = new LinkedList<>();
 
         Temp = setter[randomIndex] + "/" + randomIndex;
-        setter[0] = Temp;
-        setter = setter[randomIndex].split(":, /");
+        setter = Temp.split(":, /");
 
-        ref.push(setter);
-        if (validator(setter)){
-            return setter;
-        }
+        return validator(setter, arr, randomIndex);
     }
 
-    interface returns {
-     String[] set();
-     boolean;
-    }
-    public  boolean validator (String[] setter) {
-        switch (setter.length)
-        {
-            case 3:
-                return true;
-            default:
-                return false;
+    private  String[] validator (String[] setter, String[] arr, int randomIndex) {
+        if (setter.length == 3) {
+            set(arr, randomIndex);
         }
+        return setter;
     }
 }
 
