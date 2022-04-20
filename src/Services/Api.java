@@ -26,6 +26,7 @@ public class  Api{
 
         Temp = setter[randomIndex] + "/" + randomIndex;
         setter = Temp.split(":, /");
+        arr[randomIndex] = Temp;
 
         return validator(setter, arr, randomIndex);
     }

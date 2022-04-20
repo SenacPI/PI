@@ -59,8 +59,6 @@ public class MenuUI {
 
             // exit
             System.exit(0);
-
-
         }
 }
 }
