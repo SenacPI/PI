@@ -18,10 +18,14 @@ public class Game {
 
     public static void start() {
 
+        int rodada = 0;
+
         final int size = api.country().length;
 
         do {
             String[] countryInfo = api.data(picker.nextInt(size));
+
+            System.out.println("Rodada: " + rodada);
 
             System.out.println("Qual a capital d(o)/(a): " + countryInfo[0] + "?");
 
@@ -29,6 +33,21 @@ public class Game {
             String userAnswer = sc.nextLine();
 
             if (Objects.equals(userAnswer.toLowerCase(), countryInfo[1].toLowerCase())) {
+
+                if(rodada == 3) {
+                    // rodada 3 = adiciona 10 mil de dinheiro
+                    money += 10000;
+                }
+
+                if(rodada == 5) {
+                    // rodada 5 = adiciona 100 mil de dinheiro
+                    money += 100000;
+                }
+
+                if(rodada == 9) {
+                    // rodada 9 = adiciona 1 mi de dinheiro
+                    money += 1000000;
+                }
 
                 counter += 0.1;
                 money += 1141 + money * counter;
