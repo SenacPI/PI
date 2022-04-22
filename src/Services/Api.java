@@ -18,7 +18,7 @@ public class  Api{
                 "Azerbaijão:Baku", "Bahamas:Nassau", "Bangladexe:Daca", "Bélgia:Bruxelas",
                 "Bielorrússia:Minsque", "Bolívia:Sucre", "Bulgária:Sófia", "Cabo Verde:Praia",
                 "Catar:Doa", "Canadá:Otava", "Cazaquistão:Astana", "Chile:Santiago",
-                "China:Pequim", "Colômbia:Bogotá", "Coreia do Sul:Seul", "Costa Rica:São José", "Japão:Tóquio", "Argentina:Buenos Aires", "Ucrânia:Kiev", "Brasil:Brasília", "Estados Unidos da América:Washington"
+                "China:Pequim", "Colômbia:Bogotá", "Coreia do Sul:Seul", "Costa Rica:São José", "Japão:Tóquio", "Ucrânia:Kiev", "Brasil:Brasília", "Estados Unidos da América:Washington"
         };
     }
 
