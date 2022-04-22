@@ -15,10 +15,10 @@ public class  Api{
                 "Afeganistão:Kabul", "África do Sul:Pretória", "Albânia:Tirana",
                 "Alemanha:Berlim", "Angola:Luanda", "Arábia Saudita:Riad",
                 "Argentina:Buenos Aires", "Australia:Camberra", "Armênia:Yerevam",
-                "Azerbaijão:Bacu", "Bahamas:Nassau", "Bangladexe:Daca", "Bélgia:Bruxelas",
+                "Azerbaijão:Baku", "Bahamas:Nassau", "Bangladexe:Daca", "Bélgia:Bruxelas",
                 "Bielorrússia:Minsque", "Bolívia:Sucre", "Bulgária:Sófia", "Cabo Verde:Praia",
                 "Catar:Doa", "Canadá:Otava", "Cazaquistão:Astana", "Chile:Santiago",
-                "China:Pequim", "Colômbia:Bogotá", "Coreia do Sul:Seul", "Costa Rica:São José"
+                "China:Pequim", "Colômbia:Bogotá", "Coreia do Sul:Seul", "Costa Rica:São José", "Japão:Tóquio", "Argentina:Buenos Aires", "Ucrânia:Kiev", "Brasil:Brasília", "Estados Unidos da América:Washington"
         };
     }
 
